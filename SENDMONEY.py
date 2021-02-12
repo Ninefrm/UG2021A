@@ -3,10 +3,12 @@
 
 #TIME
 from time import sleep
+from datetime import datetime, timedelta
 
 class SendMoney():
     def __init__(self):
         Solucion = 0 
+        nowS = datetime.now()
         for S in range(0,10):
             # print("S " + str(S))
             for E in range(0,10):
@@ -56,6 +58,9 @@ class SendMoney():
                                                                         Solucion = Solucion+1
                                                                         # sleep(60)
                                                                         # break
+        print(nowS.strftime("%Y/%m/%d %H:%M:%S"))
+        nowS = datetime.now()
+        print(nowS.strftime("%Y/%m/%d %H:%M:%S"))
         print("Se encontrarion " + str(Solucion) + " soluciones.")
         pass
 
